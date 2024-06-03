@@ -1,0 +1,19 @@
+# Copyright (c) avijit bhattacharjee 2024
+
+name: Testing act CLI
+
+on:  # yamllint disable-line rule:truthy
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+    
+jobs:
+  test:
+    name: test act cli
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printing service name
+        id: build
+        run: echo "this is act-cli-github-actions"
